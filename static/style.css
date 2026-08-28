@@ -1,0 +1,390 @@
+/* Roster website stylesheet (issue #537). Plain CSS, no build step, no
+   framework - see Docs/Systems/RosterWebsite.md. */
+
+:root {
+  --color-bg: #f7f5f2;
+  --color-surface: #ffffff;
+  --color-text: #23201c;
+  --color-text-muted: #6b6459;
+  --color-border: #e2ddd4;
+  --color-accent: #c0392b;
+
+  --color-status-draft: #8a7a4f;
+  --color-status-active: #2e7d4f;
+  --color-status-archived: #7a7a7a;
+
+  --color-role-starter: #c0392b;
+  --color-role-common: #6b6459;
+  --color-role-curveball: #7d3c98;
+  --color-role-rare: #1f6fa8;
+  --color-role-apex: #b8860b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+.site-header {
+  padding: 2rem 1.5rem 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.site-header h1 {
+  margin: 0.25rem 0;
+  font-size: 1.9rem;
+}
+
+.site-subtitle {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.breadcrumb {
+  margin: 0 0 0.5rem;
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.site-footer {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer code {
+  background: var(--color-surface);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+}
+
+/* Status badges */
+
+.status-badge {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.status-draft { background: var(--color-status-draft); }
+.status-active { background: var(--color-status-active); }
+.status-archived { background: var(--color-status-archived); }
+
+/* Roster index */
+
+.roster-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.25rem;
+}
+
+.roster-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.roster-card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.roster-card h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.roster-summary {
+  color: var(--color-text-muted);
+}
+
+.role-counts {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.role-counts li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.roster-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Role chips/headings */
+
+.role-chip {
+  display: inline-block;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.78rem;
+}
+
+.role-starter, .role-chip.role-starter { background: var(--color-role-starter); }
+.role-common, .role-chip.role-common { background: var(--color-role-common); }
+.role-curveball, .role-chip.role-curveball { background: var(--color-role-curveball); }
+.role-rare, .role-chip.role-rare { background: var(--color-role-rare); }
+.role-apex, .role-chip.role-apex { background: var(--color-role-apex); }
+
+.role-heading {
+  display: inline-block;
+  color: #fff;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0 1rem;
+}
+
+/* Roster page */
+
+.roster-description {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  white-space: pre-line;
+}
+
+.predecessor-link {
+  color: var(--color-text-muted);
+}
+
+.empty-state {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Monster cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.monster-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.monster-art {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--color-bg);
+  border-radius: 0.5rem;
+}
+
+.monster-art-missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  border: 1px dashed var(--color-border);
+}
+
+.monster-name {
+  margin: 0.25rem 0 0;
+  font-size: 1.05rem;
+}
+
+.species-id {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-family: ui-monospace, monospace;
+}
+
+.type-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.type-chip {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: #fff;
+  background: #555;
+}
+
+.type-normal { background: #9a9a75; }
+.type-fire { background: #e0662c; }
+.type-water { background: #3a8fd6; }
+.type-grass { background: #5fa245; }
+.type-electric { background: #d8b32a; color: #2a2200; }
+.type-flying { background: #9aa8e0; }
+.type-ground { background: #b0834a; }
+.type-rock { background: #b3a04a; }
+.type-ghost { background: #6a5aa0; }
+.type-fighting { background: #a5442f; }
+.type-bug { background: #86a331; }
+.type-poison { background: #9048a3; }
+.type-psychic { background: #d9548b; }
+.type-dark { background: #4a4038; }
+.type-ice { background: #58c6c6; color: #06302f; }
+.type-dragon { background: #4763c9; }
+
+.intended-purpose {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  flex-grow: 1;
+}
+
+.stat-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 3.4rem 1fr 2.4rem;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.stat-label {
+  color: var(--color-text-muted);
+}
+
+.stat-bar-track {
+  background: var(--color-bg);
+  border-radius: 999px;
+  overflow: hidden;
+  height: 0.5rem;
+}
+
+.stat-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--color-accent);
+}
+
+.stat-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.evolution-summary {
+  font-size: 0.85rem;
+}
+
+.evolution-none {
+  color: var(--color-text-muted);
+}
+
+.evolution-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.evolution-arrow {
+  color: var(--color-text-muted);
+}
+
+.evolution-trigger {
+  font-size: 0.7rem;
+}
+
+.evolution-step.evolution-only {
+  color: var(--color-text-muted);
+}
+
+.evolution-only-tag {
+  display: inline-block;
+  margin-left: 0.25rem;
+  padding: 0 0.35rem;
+  border-radius: 0.25rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  font-size: 0.7rem;
+}
+
+.encounter-info {
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+dl.encounter-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.2rem 0.75rem;
+}
+
+dl.encounter-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+dl.encounter-info dt {
+  color: var(--color-text-muted);
+}
+
+.encounter-none {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Responsive: phone-width layout */
+
+@media (max-width: 30rem) {
+  .site-header, main, .site-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-grid, .roster-list {
+    grid-template-columns: 1fr;
+  }
+
+  dl.encounter-info {
+    grid-template-columns: 1fr;
+  }
+}
