@@ -561,6 +561,121 @@ dl.encounter-info dt {
   padding: 0.05rem 0.4rem;
 }
 
+/* Counter relationships (#542/#543) */
+
+.counter-relationship-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.counter-relationship-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.counter-target-art {
+  width: 2.75rem;
+  height: 2.75rem;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--color-bg);
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+
+.counter-target-art span {
+  font-size: 0.45rem;
+  line-height: 1.1;
+}
+
+.counter-target-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.counter-target-info > a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.counter-kind-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.counter-kind-chip {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  color: #fff;
+  background: #555;
+}
+
+.counter-kind-stab { background: var(--color-accent); }
+.counter-kind-coverage { background: var(--color-role-rare); }
+.counter-kind-strategic { background: var(--color-role-curveball); }
+.counter-kind-move { background: var(--color-status-active); }
+.counter-kind-status { background: var(--color-role-apex); }
+.counter-kind-stat { background: var(--color-role-common); }
+
+.counter-reason {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.counter-empty {
+  margin: 0.5rem 0 0;
+}
+
+.counter-section {
+  white-space: normal;
+}
+
+/* Compact roster-card counter summary */
+
+.monster-card-counters {
+  border-top: 1px solid var(--color-border);
+  margin-top: 0.35rem;
+  padding-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.monster-card-counters summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.monster-card-counters summary::marker {
+  color: var(--color-text-muted);
+}
+
+.counter-card-body {
+  margin-top: 0.5rem;
+}
+
+.counter-subheading {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin: 0.6rem 0 0.15rem;
+}
+
+.counter-subheading:first-child {
+  margin-top: 0;
+}
+
 /* Responsive: phone-width layout */
 
 @media (max-width: 30rem) {
