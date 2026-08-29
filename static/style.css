@@ -700,6 +700,133 @@ dl.encounter-info dt {
   margin-top: 0;
 }
 
+/* Roster matchup map (#544) */
+
+.roster-matchup-link,
+.matchup-relationship-row a {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.matchup-map,
+.matchup-warnings {
+  margin-top: 1.5rem;
+}
+
+.matchup-filters {
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.matchup-filters legend {
+  font-weight: 700;
+  padding: 0 0.3rem;
+}
+
+.matchup-filters label {
+  cursor: pointer;
+}
+
+.matchup-legend,
+.matchup-warning-rule,
+.matchup-focus-summary {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.matchup-svg-wrap {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  overflow: auto;
+}
+
+.matchup-svg {
+  display: block;
+  margin: auto;
+  min-width: 34rem;
+  width: min(100%, 42rem);
+}
+
+.matchup-edge {
+  fill: none;
+  opacity: 0.75;
+  stroke-width: 3;
+}
+
+.matchup-edge-stab,
+.matchup-arrow-stab { fill: var(--color-accent); stroke: var(--color-accent); }
+.matchup-edge-coverage,
+.matchup-arrow-coverage { fill: var(--color-role-rare); stroke: var(--color-role-rare); }
+.matchup-edge-authored,
+.matchup-arrow-authored { fill: var(--color-role-curveball); stroke: var(--color-role-curveball); }
+
+/* A dash pattern signals that the one visual arrow retains more than one
+   normalized category; filters then recolor it to the active category. */
+.matchup-edge[data-categories~="stab"][data-categories~="coverage"],
+.matchup-edge[data-categories~="stab"][data-categories~="authored"],
+.matchup-edge[data-categories~="coverage"][data-categories~="authored"] {
+  stroke-dasharray: 10 4 2 4;
+}
+
+.matchup-edge[hidden],
+.matchup-relationship-row[hidden] { display: none; }
+
+.matchup-node circle {
+  fill: var(--color-surface);
+  stroke: var(--color-text);
+  stroke-width: 2;
+}
+
+.matchup-node text {
+  fill: var(--color-text);
+  font-size: 11px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.matchup-node:focus circle,
+.matchup-node:hover circle {
+  fill: #fff2c9;
+  stroke: var(--color-accent);
+  stroke-width: 4;
+}
+
+.matchup-node.is-unrelated,
+.matchup-edge.is-unrelated { opacity: 0.18; }
+.matchup-edge.is-outgoing { stroke-width: 5; opacity: 1; }
+.matchup-edge.is-incoming { stroke-dasharray: 7 4; opacity: 1; }
+
+.matchup-relationship-details {
+  margin-top: 1rem;
+}
+
+.matchup-relationship-details ul,
+.matchup-warnings ul {
+  margin: 0.6rem 0;
+  padding-left: 1.3rem;
+}
+
+.matchup-relationship-row {
+  margin: 0.4rem 0;
+}
+
+.matchup-kind-text {
+  color: var(--color-text-muted);
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-left: 0.4rem;
+}
+
+.matchup-filter-empty {
+  margin: 0.75rem 0;
+}
+
 /* Responsive: phone-width layout */
 
 @media (max-width: 30rem) {
@@ -718,5 +845,9 @@ dl.encounter-info dt {
 
   dl.encounter-info {
     grid-template-columns: 1fr;
+  }
+
+  .matchup-svg {
+    min-width: 30rem;
   }
 }
