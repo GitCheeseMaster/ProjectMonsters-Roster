@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>V1 本番ロスター</title>
+<title>V1 本番版</title>
 <link rel="stylesheet" href="../../static/style.css">
+<script src="../../static/card-tabs.js" defer></script>
 <style>body{font-family:'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;}</style>
 </head>
 <body>
 
     <header class="site-header">
-      <p class="breadcrumb"><a href="../../index.html">← ロスター一覧</a></p>
-      <h1>V1 本番ロスター</h1>
+      <p class="breadcrumb"><a href="../../index.html">← モンスター構成一覧</a></p>
+      <h1>V1 本番版</h1>
       <p class="status-badge status-active">本番</p>
       
     </header>
     <main>
       <section class="roster-description">
-        <p>現在の本番モンスターロスター。御三家スターター3系統（ほのお・みず・くさ）、通常レベル進化のコモン野生3系統（ノーマル・ひこう・でんき）、トレーナー報酬進化を使うカーブボール3系統（ゴースト・かくとう・どく）、進化しないレア3種（いわ・じめん・こおり）、進化しないエスパータイプのApex1種で構成される。デザイン意図は issue #299, #303, #304, #305, #306 に記録されている。</p>
+        <p>現在の本番モンスター構成。御三家スターター3系統（ほのお・みず・くさ）、通常レベル進化のコモン野生3系統（ノーマル・ひこう・でんき）、トレーナー報酬進化を使うカーブボール3系統（ゴースト・かくとう・どく）、進化しないレア3種（いわ・じめん・こおり）、進化しないエスパータイプのApex1種で構成される。デザイン意図は issue #299, #303, #304, #305, #306 に記録されている。</p>
       </section>
       
             <section class="role-section" aria-label="スターター">
@@ -28,9 +29,24 @@
       <h4 class="monster-name">ファイヤーリザード</h4>
       <p class="species-id">ID: firelizard</p>
       <div class="type-chips"><span class="type-chip type-fire">ほのお</span></div>
-      <p class="intended-purpose">ほのおタイプのスターター。3段階進化ラインの初期形態で、ロスターの基準となるほのおタイプの選択肢。</p>
+      <p class="intended-purpose">ほのおタイプのスターター。3段階進化ラインの初期形態で、構成の基準となるほのおタイプの選択肢。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:40%"></span></span><span class="stat-value">120</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">ファイヤーリザード</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">ごうかトカゲ<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">炎のトカゲ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="ファイヤーリザードの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="firelizard-evolution-tab"
+          aria-selected="true" aria-controls="firelizard-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="firelizard-learnset-tab"
+          aria-selected="false" aria-controls="firelizard-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="firelizard-evolution-panel" aria-labelledby="firelizard-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">ファイヤーリザード</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">ごうかトカゲ<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">炎のトカゲ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="firelizard-learnset-panel" aria-labelledby="firelizard-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ひっかく</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">ほのお</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">しゃくねつのにらみ</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">フレイムファング</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">もえるこぶし</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">まっすぐなほのお</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">おおきなほのお</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">すてみぶつかり</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">最初のパートナーとして選択（野生では出現しません）</p>
     </article>
     
@@ -40,9 +56,24 @@
       <h4 class="monster-name">アオガメ</h4>
       <p class="species-id">ID: blueturtle</p>
       <div class="type-chips"><span class="type-chip type-water">みず</span></div>
-      <p class="intended-purpose">みずタイプのスターター。3段階進化ラインの初期形態で、ロスターの基準となるみずタイプの選択肢。</p>
+      <p class="intended-purpose">みずタイプのスターター。3段階進化ラインの初期形態で、構成の基準となるみずタイプの選択肢。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:17%"></span></span><span class="stat-value">50</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">アオガメ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">げきりゅうガメ<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">よろいガメ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="アオガメの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="blueturtle-evolution-tab"
+          aria-selected="true" aria-controls="blueturtle-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="blueturtle-learnset-tab"
+          aria-selected="false" aria-controls="blueturtle-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="blueturtle-evolution-panel" aria-labelledby="blueturtle-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">アオガメ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">げきりゅうガメ<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">よろいガメ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="blueturtle-learnset-panel" aria-labelledby="blueturtle-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ひっかく</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">みずでっぽう</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">かたくなる</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">はげしい水流</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">たきのぼり</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">あわのせん</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">すごいみずポンプ</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">ハサミでぶん殴る</span><span class="type-chip type-water">みず</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">最初のパートナーとして選択（野生では出現しません）</p>
     </article>
     
@@ -52,9 +83,24 @@
       <h4 class="monster-name">グリーンフロッグ</h4>
       <p class="species-id">ID: greenfrog</p>
       <div class="type-chips"><span class="type-chip type-grass">くさ</span></div>
-      <p class="intended-purpose">くさタイプのスターター。3段階進化ラインの初期形態で、ロスターの基準となるくさタイプの選択肢。どくカーブボールが圧力をかける対象として意図されている。</p>
+      <p class="intended-purpose">くさタイプのスターター。3段階進化ラインの初期形態で、構成の基準となるくさタイプの選択肢。どくカーブボールが圧力をかける対象として意図されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:4%"></span></span><span class="stat-value">13</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:30%"></span></span><span class="stat-value">90</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">グリーンフロッグ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">はねるカエル<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">花咲きカエル<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="グリーンフロッグの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="greenfrog-evolution-tab"
+          aria-selected="true" aria-controls="greenfrog-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="greenfrog-learnset-tab"
+          aria-selected="false" aria-controls="greenfrog-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="greenfrog-evolution-panel" aria-labelledby="greenfrog-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">グリーンフロッグ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">はねるカエル<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">花咲きカエル<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="greenfrog-learnset-panel" aria-labelledby="greenfrog-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ひっかく</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">つるのムチ</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">どくのほうし</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">はげしいツルうち</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">するどいはっぱ</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">ねむりのほうし</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">ひかりをためる</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">めちゃくちゃあばれる</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">最初のパートナーとして選択（野生では出現しません）</p>
     </article>
     </div>
@@ -68,9 +114,24 @@
       <h4 class="monster-name">普通のネズミ</h4>
       <p class="species-id">ID: normalrat</p>
       <div class="type-chips"><span class="type-chip type-normal">ノーマル</span></div>
-      <p class="intended-purpose">入手しやすいノーマルタイプのコモン。通常のレベルアップで「ロバストラット」に進化し、ロスターで最も育てやすい序盤の選択肢。</p>
+      <p class="intended-purpose">入手しやすいノーマルタイプのコモン。通常のレベルアップで「ロバストラット」に進化し、構成で最も育てやすい序盤の選択肢。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">普通のネズミ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">たくましいネズミ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="普通のネズミの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="normalrat-evolution-tab"
+          aria-selected="true" aria-controls="normalrat-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="normalrat-learnset-tab"
+          aria-selected="false" aria-controls="normalrat-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalrat-evolution-panel" aria-labelledby="normalrat-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">普通のネズミ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">たくましいネズミ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalrat-learnset-panel" aria-labelledby="normalrat-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ひっかく</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">ヘビーストライク</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">なきごえ</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング0</dd></div><div><dt>出現レベル</dt><dd>1</dd></div><div><dt>生息数</dt><dd>6</dd></div><div><dt>補充</dt><dd>あり（45秒ごと）</dd></div></dl>
     </article>
     
@@ -80,9 +141,24 @@
       <h4 class="monster-name">普通の鳩</h4>
       <p class="species-id">ID: normalpidgeon</p>
       <div class="type-chips"><span class="type-chip type-flying">ひこう</span></div>
-      <p class="intended-purpose">純粋なひこうタイプのコモン。通常のレベルアップで進化し、ノーマルラットとは異なる専用のひこうタイプの選択肢をロスターに提供する。</p>
+      <p class="intended-purpose">純粋なひこうタイプのコモン。通常のレベルアップで進化し、ノーマルラットとは異なる専用のひこうタイプの選択肢を構成に提供する。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:5%"></span></span><span class="stat-value">14</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:5%"></span></span><span class="stat-value">14</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:53%"></span></span><span class="stat-value">160</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">普通の鳩</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">堂々とした鳩<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="普通の鳩の詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="normalpidgeon-evolution-tab"
+          aria-selected="true" aria-controls="normalpidgeon-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="normalpidgeon-learnset-tab"
+          aria-selected="false" aria-controls="normalpidgeon-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalpidgeon-evolution-panel" aria-labelledby="normalpidgeon-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">普通の鳩</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">堂々とした鳩<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalpidgeon-learnset-panel" aria-labelledby="normalpidgeon-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">つばさビンタ</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">つよいかぜ</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">まわるくちばし</span><span class="type-chip type-flying">ひこう</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング0</dd></div><div><dt>出現レベル</dt><dd>1</dd></div><div><dt>生息数</dt><dd>6</dd></div><div><dt>補充</dt><dd>あり（45秒ごと）</dd></div></dl>
     </article>
     
@@ -92,9 +168,24 @@
       <h4 class="monster-name">ビリビリマウス</h4>
       <p class="species-id">ID: yellowmouse</p>
       <div class="type-chips"><span class="type-chip type-electric">でんき</span></div>
-      <p class="intended-purpose">純粋なでんきタイプのコモン。通常のレベルアップで進化し、手に入れやすいでんきタイプの選択肢をロスターに提供する。</p>
+      <p class="intended-purpose">純粋なでんきタイプのコモン。通常のレベルアップで進化し、手に入れやすいでんきタイプの選択肢を構成に提供する。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:50%"></span></span><span class="stat-value">150</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">ビリビリマウス</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">帯電マウス<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="ビリビリマウスの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="yellowmouse-evolution-tab"
+          aria-selected="true" aria-controls="yellowmouse-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="yellowmouse-learnset-tab"
+          aria-selected="false" aria-controls="yellowmouse-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="yellowmouse-evolution-panel" aria-labelledby="yellowmouse-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">ビリビリマウス</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">帯電マウス<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="yellowmouse-learnset-panel" aria-labelledby="yellowmouse-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ひっかく</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">スパーク</span><span class="type-chip type-electric">でんき</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">せいでんき</span><span class="type-chip type-electric">でんき</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">でんげき</span><span class="type-chip type-electric">でんき</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング0</dd></div><div><dt>出現レベル</dt><dd>1</dd></div><div><dt>生息数</dt><dd>6</dd></div><div><dt>補充</dt><dd>あり（45秒ごと）</dd></div></dl>
     </article>
     </div>
@@ -110,7 +201,22 @@
       <div class="type-chips"><span class="type-chip type-ghost">ゴースト</span></div>
       <p class="intended-purpose">ゴーストタイプの専門カーブボール。エスパーApexへの主要なカウンターとして意図されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:40%"></span></span><span class="stat-value">120</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:47%"></span></span><span class="stat-value">140</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">薄影</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">濃影<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="薄影の詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="faintshade-evolution-tab"
+          aria-selected="true" aria-controls="faintshade-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="faintshade-learnset-tab"
+          aria-selected="false" aria-controls="faintshade-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="faintshade-evolution-panel" aria-labelledby="faintshade-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">薄影</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">濃影<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="faintshade-learnset-panel" aria-labelledby="faintshade-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ぺろり</span><span class="type-chip type-ghost">ゴースト</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">まよわせるひかり</span><span class="type-chip type-ghost">ゴースト</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">レベルぶんのかげ</span><span class="type-chip type-ghost">ゴースト</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">かみつく</span><span class="type-chip type-dark">あく</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">ねむくなれ</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">ねてるあいてからすう</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">さようならワープ</span><span class="type-chip type-psychic">エスパー</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング1</dd></div><div><dt>出現レベル</dt><dd>2〜4</dd></div><div><dt>生息数</dt><dd>3</dd></div><div><dt>補充</dt><dd>あり（90秒ごと）</dd></div></dl>
     </article>
     
@@ -122,7 +228,22 @@
       <div class="type-chips"><span class="type-chip type-fighting">かくとう</span></div>
       <p class="intended-purpose">かくとうタイプの専門カーブボール。いわレア、ノーマルコモン系統、こおりレアへの回答として意図されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:47%"></span></span><span class="stat-value">140</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:37%"></span></span><span class="stat-value">110</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">見習い拳</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">達人拳<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="見習い拳の詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="apprenticefist-evolution-tab"
+          aria-selected="true" aria-controls="apprenticefist-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="apprenticefist-learnset-tab"
+          aria-selected="false" aria-controls="apprenticefist-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="apprenticefist-evolution-panel" aria-labelledby="apprenticefist-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">見習い拳</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">達人拳<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="apprenticefist-learnset-panel" aria-labelledby="apprenticefist-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">てのひらチョップ</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">みぎひだりキック</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">くるっとキック</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">すてみのなげ</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">ひざでたかくとぶ</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">すごくおもいパンチ</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">めちゃくちゃあばれる</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング1</dd></div><div><dt>出現レベル</dt><dd>2〜4</dd></div><div><dt>生息数</dt><dd>3</dd></div><div><dt>補充</dt><dd>あり（90秒ごと）</dd></div></dl>
     </article>
     
@@ -134,7 +255,22 @@
       <div class="type-chips"><span class="type-chip type-poison">どく</span></div>
       <p class="intended-purpose">どくタイプの専門カーブボール。くさスターター系統に圧力をかけ、状態異常・撹乱を得意とすることを意図している。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:43%"></span></span><span class="stat-value">130</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">毒袋</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">毒煙袋<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="毒袋の詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="poisonpouch-evolution-tab"
+          aria-selected="true" aria-controls="poisonpouch-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="poisonpouch-learnset-tab"
+          aria-selected="false" aria-controls="poisonpouch-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="poisonpouch-evolution-panel" aria-labelledby="poisonpouch-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">毒袋</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">毒煙袋<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="poisonpouch-learnset-panel" aria-labelledby="poisonpouch-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ちくっとどく</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">どくのガス</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">とけるえき</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">どろどろこうげき</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">どろどろになる</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">ちをすう</span><span class="type-chip type-bug">むし</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">すてみぶつかり</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング1</dd></div><div><dt>出現レベル</dt><dd>2〜4</dd></div><div><dt>生息数</dt><dd>3</dd></div><div><dt>補充</dt><dd>あり（90秒ごと）</dd></div></dl>
     </article>
     </div>
@@ -150,7 +286,22 @@
       <div class="type-chips"><span class="type-chip type-rock">いわ</span></div>
       <p class="intended-purpose">耐久力のある物理寄りのレア。ひこう・ほのおへの強力な回答でありながら、明確な対策も残されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:83%"></span></span><span class="stat-value">250</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:23%"></span></span><span class="stat-value">70</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:23%"></span></span><span class="stat-value">70</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:27%"></span></span><span class="stat-value">80</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="岩よろいの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="rockarmor-evolution-tab"
+          aria-selected="true" aria-controls="rockarmor-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="rockarmor-learnset-tab"
+          aria-selected="false" aria-controls="rockarmor-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="rockarmor-evolution-panel" aria-labelledby="rockarmor-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="rockarmor-learnset-panel" aria-labelledby="rockarmor-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">いわをなげる</span><span class="type-chip type-rock">いわ</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">かたくなる</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">あたまでゴン</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">いわがどさどさ</span><span class="type-chip type-rock">いわ</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">ホネでたたく</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">ちからまかせのたたきつけ</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">とてもおもいキック</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">おおばくはつ</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング2</dd></div><div><dt>出現レベル</dt><dd>4〜7</dd></div><div><dt>生息数</dt><dd>2</dd></div><div><dt>補充</dt><dd>あり（180秒ごと）</dd></div></dl>
     </article>
     
@@ -162,7 +313,22 @@
       <div class="type-chips"><span class="type-chip type-ground">じめん</span></div>
       <p class="intended-purpose">高い物理圧力を持つじめんタイプのレア。でんき・ほのおへの強力な回答でありながら、明確な対策も残されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:70%"></span></span><span class="stat-value">210</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:30%"></span></span><span class="stat-value">90</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:13%"></span></span><span class="stat-value">40</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:43%"></span></span><span class="stat-value">130</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="土くぐりの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="dirtburrower-evolution-tab"
+          aria-selected="true" aria-controls="dirtburrower-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="dirtburrower-learnset-tab"
+          aria-selected="false" aria-controls="dirtburrower-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="dirtburrower-evolution-panel" aria-labelledby="dirtburrower-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="dirtburrower-learnset-panel" aria-labelledby="dirtburrower-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">あたまでゴン</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">すなをかける</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">もぐってどん</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">じめんをゆらす</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">むりやりとっしん</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">ホネがもどってくる</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">ためてずつき</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">ちいさなじばく</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング2</dd></div><div><dt>出現レベル</dt><dd>4〜7</dd></div><div><dt>生息数</dt><dd>2</dd></div><div><dt>補充</dt><dd>あり（180秒ごと）</dd></div></dl>
     </article>
     
@@ -172,9 +338,24 @@
       <h4 class="monster-name">凍り玉</h4>
       <p class="species-id">ID: frozenorb</p>
       <div class="type-chips"><span class="type-chip type-ice">こおり</span></div>
-      <p class="intended-purpose">攻撃的な特殊寄り・汎用型のこおりタイプのレア。ロスターに異なる攻撃の軸を与え、じめんタイプの脅威への回答となる一方、明確な対策も残されている。</p>
+      <p class="intended-purpose">攻撃的な特殊寄り・汎用型のこおりタイプのレア。構成に異なる攻撃の軸を与え、じめんタイプの脅威への回答となる一方、明確な対策も残されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:63%"></span></span><span class="stat-value">190</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:30%"></span></span><span class="stat-value">90</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:50%"></span></span><span class="stat-value">150</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="凍り玉の詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="frozenorb-evolution-tab"
+          aria-selected="true" aria-controls="frozenorb-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="frozenorb-learnset-tab"
+          aria-selected="false" aria-controls="frozenorb-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="frozenorb-evolution-panel" aria-labelledby="frozenorb-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="frozenorb-learnset-panel" aria-labelledby="frozenorb-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">つよいかぜ</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">しろいもや</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">こおりのせん</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">こおりのあらし</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">ひえるこぶし</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">そらからすごいどん</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">すごくつよいこうせん</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">ぜんぶもとどおり</span><span class="type-chip type-ice">こおり</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>リング2</dd></div><div><dt>出現レベル</dt><dd>4〜7</dd></div><div><dt>生息数</dt><dd>2</dd></div><div><dt>補充</dt><dd>あり（180秒ごと）</dd></div></dl>
     </article>
     </div>
@@ -188,9 +369,24 @@
       <h4 class="monster-name">念動コイル</h4>
       <p class="species-id">ID: telekineticcoil</p>
       <div class="type-chips"><span class="type-chip type-psychic">エスパー</span></div>
-      <p class="intended-purpose">伝説級のエスパータイプApex。ロスターで最も価値の高い遭遇・捕獲対象であり、一方的に支配的にならないよう、ゴーストカーブボールによって意図的にカウンターされている。</p>
+      <p class="intended-purpose">伝説級のエスパータイプApex。構成で最も価値の高い遭遇・捕獲対象であり、一方的に支配的にならないよう、ゴーストカーブボールによって意図的にカウンターされている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:90%"></span></span><span class="stat-value">270</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:37%"></span></span><span class="stat-value">110</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:15%"></span></span><span class="stat-value">44</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:57%"></span></span><span class="stat-value">170</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:50%"></span></span><span class="stat-value">150</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="念動コイルの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="telekineticcoil-evolution-tab"
+          aria-selected="true" aria-controls="telekineticcoil-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="telekineticcoil-learnset-tab"
+          aria-selected="false" aria-controls="telekineticcoil-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="telekineticcoil-evolution-panel" aria-labelledby="telekineticcoil-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="telekineticcoil-learnset-panel" aria-labelledby="telekineticcoil-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">ひっかく</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">あたまぐるぐる</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">つよいねんりき</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">ためてかぜぎり</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">ふしぎなひかりせん</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">ねてるあいてからすう</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">レベルまかせのなみ</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">みえないかべ</span><span class="type-chip type-psychic">エスパー</span></li></ul>
+      </div>
+    </section>
+    
       <dl class="encounter-info"><div><dt>出現場所</dt><dd>中央</dd></div><div><dt>出現レベル</dt><dd>10</dd></div><div><dt>生息数</dt><dd>1</dd></div><div><dt>補充</dt><dd>なし</dd></div></dl>
     </article>
     </div>
@@ -199,8 +395,8 @@
     </main>
     
     <footer class="site-footer">
-      <p>エクスポート元コミット: <code>e9e05aa3</code></p>
-      <p>エクスポート日時: <code>2026-08-28T23:11:29Z</code></p>
+      <p>エクスポート元コミット: <code>c2e10675</code></p>
+      <p>エクスポート日時: <code>2026-08-29T00:19:25Z</code></p>
     </footer>
     
     

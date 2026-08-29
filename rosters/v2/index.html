@@ -5,56 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>V2 ドラフト</title>
 <link rel="stylesheet" href="../../static/style.css">
+<script src="../../static/card-tabs.js" defer></script>
 <style>body{font-family:'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;}</style>
 </head>
 <body>
 
     <header class="site-header">
-      <p class="breadcrumb"><a href="../../index.html">← ロスター一覧</a></p>
+      <p class="breadcrumb"><a href="../../index.html">← モンスター構成一覧</a></p>
       <h1>V2 ドラフト</h1>
       <p class="status-badge status-draft">ドラフト</p>
       
     </header>
     <main>
       <section class="roster-description">
-        <p>V1（v1）からコピーしたドラフトロスター。今後予定されている下層拡張（コモン+6種、レイヤー2+2種）に向けた次のロスターイテレーションとして用意された安全な作業スペースであり、現時点ではV1と完全に同じ構成。未承認のモンスターデザインはまだ反映していない。</p>
+        <p>V1（v1）からコピーしたドラフト構成。今後予定されている下層拡張（コモン+6種、レイヤー2+2種）に向けた次の構成の改訂として用意された安全な作業スペースであり、現時点ではV1と完全に同じ構成。未承認のモンスターデザインはまだ反映していない。</p>
       </section>
       
             <section class="role-section" aria-label="スターター">
               <h3 class="role-heading role-starter">スターター</h3>
               <div class="card-grid">
     <article class="monster-card" data-species-id="firelizard">
-      <img class="monster-art" src="../../images/firelizard.png" alt="ファイヤーリザード" loading="lazy">
-      <h4 class="monster-name">ファイヤーリザード</h4>
+      <img class="monster-art" src="../../images/firelizard.png" alt="Fire Lizard" loading="lazy">
+      <h4 class="monster-name">Fire Lizard</h4>
       <p class="species-id">ID: firelizard</p>
       <div class="type-chips"><span class="type-chip type-fire">ほのお</span></div>
-      <p class="intended-purpose">ほのおタイプのスターター。3段階進化ラインの初期形態で、ロスターの基準となるほのおタイプの選択肢。</p>
+      <p class="intended-purpose">ほのおタイプのスターター。3段階進化ラインの初期形態で、構成の基準となるほのおタイプの選択肢。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:40%"></span></span><span class="stat-value">120</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">ファイヤーリザード</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">ごうかトカゲ<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">炎のトカゲ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Fire Lizardの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="firelizard-evolution-tab"
+          aria-selected="true" aria-controls="firelizard-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="firelizard-learnset-tab"
+          aria-selected="false" aria-controls="firelizard-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="firelizard-evolution-panel" aria-labelledby="firelizard-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Fire Lizard</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Blazing Lizard<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Flame Lizard<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="firelizard-learnset-panel" aria-labelledby="firelizard-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Scratch</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Flame</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Scorching Glare</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Flame Fang</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Burning Fist</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Straight Flame</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Big Fire</span><span class="type-chip type-fire">ほのお</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Reckless Crash</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">最初のパートナーとして選択（野生では出現しません）</p>
     </article>
     
 
     <article class="monster-card" data-species-id="blueturtle">
-      <img class="monster-art" src="../../images/blueturtle.png" alt="アオガメ" loading="lazy">
-      <h4 class="monster-name">アオガメ</h4>
+      <img class="monster-art" src="../../images/blueturtle.png" alt="Blue Turtle" loading="lazy">
+      <h4 class="monster-name">Blue Turtle</h4>
       <p class="species-id">ID: blueturtle</p>
       <div class="type-chips"><span class="type-chip type-water">みず</span></div>
-      <p class="intended-purpose">みずタイプのスターター。3段階進化ラインの初期形態で、ロスターの基準となるみずタイプの選択肢。</p>
+      <p class="intended-purpose">みずタイプのスターター。3段階進化ラインの初期形態で、構成の基準となるみずタイプの選択肢。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:17%"></span></span><span class="stat-value">50</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">アオガメ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">げきりゅうガメ<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">よろいガメ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Blue Turtleの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="blueturtle-evolution-tab"
+          aria-selected="true" aria-controls="blueturtle-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="blueturtle-learnset-tab"
+          aria-selected="false" aria-controls="blueturtle-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="blueturtle-evolution-panel" aria-labelledby="blueturtle-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Blue Turtle</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Torrent Turtle<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Armored Turtle<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="blueturtle-learnset-panel" aria-labelledby="blueturtle-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Scratch</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Water Pistol</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Harden</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Raging Water</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Waterfall</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Bubble Ray</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Powerful Water Pump</span><span class="type-chip type-water">みず</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Smack with Pincers</span><span class="type-chip type-water">みず</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">最初のパートナーとして選択（野生では出現しません）</p>
     </article>
     
 
     <article class="monster-card" data-species-id="greenfrog">
-      <img class="monster-art" src="../../images/greenfrog.png" alt="グリーンフロッグ" loading="lazy">
-      <h4 class="monster-name">グリーンフロッグ</h4>
+      <img class="monster-art" src="../../images/greenfrog.png" alt="Green Frog" loading="lazy">
+      <h4 class="monster-name">Green Frog</h4>
       <p class="species-id">ID: greenfrog</p>
       <div class="type-chips"><span class="type-chip type-grass">くさ</span></div>
-      <p class="intended-purpose">くさタイプのスターター。3段階進化ラインの初期形態で、ロスターの基準となるくさタイプの選択肢。どくカーブボールが圧力をかける対象として意図されている。</p>
+      <p class="intended-purpose">くさタイプのスターター。3段階進化ラインの初期形態で、構成の基準となるくさタイプの選択肢。どくカーブボールが圧力をかける対象として意図されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:4%"></span></span><span class="stat-value">13</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:30%"></span></span><span class="stat-value">90</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">グリーンフロッグ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">はねるカエル<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">花咲きカエル<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Green Frogの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="greenfrog-evolution-tab"
+          aria-selected="true" aria-controls="greenfrog-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="greenfrog-learnset-tab"
+          aria-selected="false" aria-controls="greenfrog-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="greenfrog-evolution-panel" aria-labelledby="greenfrog-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Green Frog</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Leaping Frog<span class="evolution-only-tag">進化限定</span></span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Blooming Frog<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="greenfrog-learnset-panel" aria-labelledby="greenfrog-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Scratch</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Vine Whip</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Poison Spores</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Fierce Vine Whip</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Sharp Leaf</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Sleep Spores</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Gather Light</span><span class="type-chip type-grass">くさ</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Wild Rampage</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">最初のパートナーとして選択（野生では出現しません）</p>
     </article>
     </div>
@@ -64,37 +110,82 @@
               <h3 class="role-heading role-common">コモン</h3>
               <div class="card-grid">
     <article class="monster-card" data-species-id="normalrat">
-      <img class="monster-art" src="../../images/normalrat.png" alt="普通のネズミ" loading="lazy">
-      <h4 class="monster-name">普通のネズミ</h4>
+      <img class="monster-art" src="../../images/normalrat.png" alt="Normal Rat" loading="lazy">
+      <h4 class="monster-name">Normal Rat</h4>
       <p class="species-id">ID: normalrat</p>
       <div class="type-chips"><span class="type-chip type-normal">ノーマル</span></div>
-      <p class="intended-purpose">入手しやすいノーマルタイプのコモン。通常のレベルアップで「ロバストラット」に進化し、ロスターで最も育てやすい序盤の選択肢。</p>
+      <p class="intended-purpose">入手しやすいノーマルタイプのコモン。通常のレベルアップで「ロバストラット」に進化し、構成で最も育てやすい序盤の選択肢。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">普通のネズミ</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">たくましいネズミ<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Normal Ratの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="normalrat-evolution-tab"
+          aria-selected="true" aria-controls="normalrat-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="normalrat-learnset-tab"
+          aria-selected="false" aria-controls="normalrat-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalrat-evolution-panel" aria-labelledby="normalrat-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Normal Rat</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Robust Rat<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalrat-learnset-panel" aria-labelledby="normalrat-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Scratch</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Heavy Strike</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Cry</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     
 
     <article class="monster-card" data-species-id="normalpidgeon">
-      <img class="monster-art" src="../../images/normalpidgeon.png" alt="普通の鳩" loading="lazy">
-      <h4 class="monster-name">普通の鳩</h4>
+      <img class="monster-art" src="../../images/normalpidgeon.png" alt="Normal Pidgeon" loading="lazy">
+      <h4 class="monster-name">Normal Pidgeon</h4>
       <p class="species-id">ID: normalpidgeon</p>
       <div class="type-chips"><span class="type-chip type-flying">ひこう</span></div>
-      <p class="intended-purpose">純粋なひこうタイプのコモン。通常のレベルアップで進化し、ノーマルラットとは異なる専用のひこうタイプの選択肢をロスターに提供する。</p>
+      <p class="intended-purpose">純粋なひこうタイプのコモン。通常のレベルアップで進化し、ノーマルラットとは異なる専用のひこうタイプの選択肢を構成に提供する。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:5%"></span></span><span class="stat-value">14</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:5%"></span></span><span class="stat-value">14</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:53%"></span></span><span class="stat-value">160</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">普通の鳩</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">堂々とした鳩<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Normal Pidgeonの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="normalpidgeon-evolution-tab"
+          aria-selected="true" aria-controls="normalpidgeon-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="normalpidgeon-learnset-tab"
+          aria-selected="false" aria-controls="normalpidgeon-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalpidgeon-evolution-panel" aria-labelledby="normalpidgeon-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Normal Pidgeon</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Stately Pidgeon<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="normalpidgeon-learnset-panel" aria-labelledby="normalpidgeon-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Wing Slap</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Strong Wind</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Spinning Beak</span><span class="type-chip type-flying">ひこう</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     
 
     <article class="monster-card" data-species-id="yellowmouse">
-      <img class="monster-art" src="../../images/yellowmouse.png" alt="ビリビリマウス" loading="lazy">
-      <h4 class="monster-name">ビリビリマウス</h4>
+      <img class="monster-art" src="../../images/yellowmouse.png" alt="Yellow Mouse" loading="lazy">
+      <h4 class="monster-name">Yellow Mouse</h4>
       <p class="species-id">ID: yellowmouse</p>
       <div class="type-chips"><span class="type-chip type-electric">でんき</span></div>
-      <p class="intended-purpose">純粋なでんきタイプのコモン。通常のレベルアップで進化し、手に入れやすいでんきタイプの選択肢をロスターに提供する。</p>
+      <p class="intended-purpose">純粋なでんきタイプのコモン。通常のレベルアップで進化し、手に入れやすいでんきタイプの選択肢を構成に提供する。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:6%"></span></span><span class="stat-value">18</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:50%"></span></span><span class="stat-value">150</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">ビリビリマウス</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">帯電マウス<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Yellow Mouseの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="yellowmouse-evolution-tab"
+          aria-selected="true" aria-controls="yellowmouse-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="yellowmouse-learnset-tab"
+          aria-selected="false" aria-controls="yellowmouse-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="yellowmouse-evolution-panel" aria-labelledby="yellowmouse-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Yellow Mouse</span><span class="evolution-arrow">→<span class="evolution-trigger">（レベル進化）</span></span><span class="evolution-step evolution-only">Charged Mouse<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="yellowmouse-learnset-panel" aria-labelledby="yellowmouse-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Scratch</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Spark</span><span class="type-chip type-electric">でんき</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Static Electricity</span><span class="type-chip type-electric">でんき</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Electric Shock</span><span class="type-chip type-electric">でんき</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     </div>
@@ -104,37 +195,82 @@
               <h3 class="role-heading role-curveball">カーブボール</h3>
               <div class="card-grid">
     <article class="monster-card" data-species-id="faintshade">
-      <img class="monster-art" src="../../images/faintshade.png" alt="薄影" loading="lazy">
-      <h4 class="monster-name">薄影</h4>
+      <img class="monster-art" src="../../images/faintshade.png" alt="Faint Shade" loading="lazy">
+      <h4 class="monster-name">Faint Shade</h4>
       <p class="species-id">ID: faintshade</p>
       <div class="type-chips"><span class="type-chip type-ghost">ゴースト</span></div>
       <p class="intended-purpose">ゴーストタイプの専門カーブボール。エスパーApexへの主要なカウンターとして意図されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:40%"></span></span><span class="stat-value">120</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:47%"></span></span><span class="stat-value">140</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">薄影</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">濃影<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Faint Shadeの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="faintshade-evolution-tab"
+          aria-selected="true" aria-controls="faintshade-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="faintshade-learnset-tab"
+          aria-selected="false" aria-controls="faintshade-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="faintshade-evolution-panel" aria-labelledby="faintshade-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Faint Shade</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">Deep Shade<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="faintshade-learnset-panel" aria-labelledby="faintshade-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Lick</span><span class="type-chip type-ghost">ゴースト</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Confusing Light</span><span class="type-chip type-ghost">ゴースト</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Level Shadow</span><span class="type-chip type-ghost">ゴースト</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Bite</span><span class="type-chip type-dark">あく</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Become Sleepy</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Drain Sleeping Foe</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Goodbye Warp</span><span class="type-chip type-psychic">エスパー</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     
 
     <article class="monster-card" data-species-id="apprenticefist">
-      <img class="monster-art" src="../../images/apprenticefist.png" alt="見習い拳" loading="lazy">
-      <h4 class="monster-name">見習い拳</h4>
+      <img class="monster-art" src="../../images/apprenticefist.png" alt="Apprentice Fist" loading="lazy">
+      <h4 class="monster-name">Apprentice Fist</h4>
       <p class="species-id">ID: apprenticefist</p>
       <div class="type-chips"><span class="type-chip type-fighting">かくとう</span></div>
       <p class="intended-purpose">かくとうタイプの専門カーブボール。いわレア、ノーマルコモン系統、こおりレアへの回答として意図されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:47%"></span></span><span class="stat-value">140</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:3%"></span></span><span class="stat-value">10</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:37%"></span></span><span class="stat-value">110</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">見習い拳</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">達人拳<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Apprentice Fistの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="apprenticefist-evolution-tab"
+          aria-selected="true" aria-controls="apprenticefist-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="apprenticefist-learnset-tab"
+          aria-selected="false" aria-controls="apprenticefist-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="apprenticefist-evolution-panel" aria-labelledby="apprenticefist-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Apprentice Fist</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">Master Fist<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="apprenticefist-learnset-panel" aria-labelledby="apprenticefist-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Palm Chop</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Right-Left Kick</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Spin Kick</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Reckless Throw</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Jump High with Knee</span><span class="type-chip type-fighting">かくとう</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Very Heavy Punch</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Wild Rampage</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     
 
     <article class="monster-card" data-species-id="poisonpouch">
-      <img class="monster-art" src="../../images/poisonpouch.png" alt="毒袋" loading="lazy">
-      <h4 class="monster-name">毒袋</h4>
+      <img class="monster-art" src="../../images/poisonpouch.png" alt="Poison Pouch" loading="lazy">
+      <h4 class="monster-name">Poison Pouch</h4>
       <p class="species-id">ID: poisonpouch</p>
       <div class="type-chips"><span class="type-chip type-poison">どく</span></div>
       <p class="intended-purpose">どくタイプの専門カーブボール。くさスターター系統に圧力をかけ、状態異常・撹乱を得意とすることを意図している。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:43%"></span></span><span class="stat-value">130</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:33%"></span></span><span class="stat-value">100</span></div></div>
-      <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">毒袋</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">毒煙袋<span class="evolution-only-tag">進化限定</span></span></div></div>
+      
+    <section class="monster-card-details" aria-label="Poison Pouchの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="poisonpouch-evolution-tab"
+          aria-selected="true" aria-controls="poisonpouch-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="poisonpouch-learnset-tab"
+          aria-selected="false" aria-controls="poisonpouch-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="poisonpouch-evolution-panel" aria-labelledby="poisonpouch-evolution-tab">
+        <div class="evolution-summary"><div class="evolution-chain"><span class="evolution-step">Poison Pouch</span><span class="evolution-arrow">→<span class="evolution-trigger">（トレーナー報酬進化）</span></span><span class="evolution-step evolution-only">Poison Smoke Pouch<span class="evolution-only-tag">進化限定</span></span></div></div>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="poisonpouch-learnset-panel" aria-labelledby="poisonpouch-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Little Poison Prick</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Poison Gas</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Dissolving Liquid</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Gooey Attack</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Turn Gooey</span><span class="type-chip type-poison">どく</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Drain Blood</span><span class="type-chip type-bug">むし</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Reckless Crash</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     </div>
@@ -144,37 +280,82 @@
               <h3 class="role-heading role-rare">レア</h3>
               <div class="card-grid">
     <article class="monster-card" data-species-id="rockarmor">
-      <img class="monster-art" src="../../images/rockarmor.png" alt="岩よろい" loading="lazy">
-      <h4 class="monster-name">岩よろい</h4>
+      <img class="monster-art" src="../../images/rockarmor.png" alt="Rock Armor" loading="lazy">
+      <h4 class="monster-name">Rock Armor</h4>
       <p class="species-id">ID: rockarmor</p>
       <div class="type-chips"><span class="type-chip type-rock">いわ</span></div>
       <p class="intended-purpose">耐久力のある物理寄りのレア。ひこう・ほのおへの強力な回答でありながら、明確な対策も残されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:83%"></span></span><span class="stat-value">250</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:23%"></span></span><span class="stat-value">70</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:23%"></span></span><span class="stat-value">70</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:7%"></span></span><span class="stat-value">20</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:27%"></span></span><span class="stat-value">80</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="Rock Armorの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="rockarmor-evolution-tab"
+          aria-selected="true" aria-controls="rockarmor-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="rockarmor-learnset-tab"
+          aria-selected="false" aria-controls="rockarmor-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="rockarmor-evolution-panel" aria-labelledby="rockarmor-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="rockarmor-learnset-panel" aria-labelledby="rockarmor-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Throw Rock</span><span class="type-chip type-rock">いわ</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Harden</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Head Bonk</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Falling Rocks</span><span class="type-chip type-rock">いわ</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Bone Smack</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Brute Force Slam</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Very Heavy Kick</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Huge Explosion</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     
 
     <article class="monster-card" data-species-id="dirtburrower">
-      <img class="monster-art" src="../../images/dirtburrower.png" alt="土くぐり" loading="lazy">
-      <h4 class="monster-name">土くぐり</h4>
+      <img class="monster-art" src="../../images/dirtburrower.png" alt="Dirt Burrower" loading="lazy">
+      <h4 class="monster-name">Dirt Burrower</h4>
       <p class="species-id">ID: dirtburrower</p>
       <div class="type-chips"><span class="type-chip type-ground">じめん</span></div>
       <p class="intended-purpose">高い物理圧力を持つじめんタイプのレア。でんき・ほのおへの強力な回答でありながら、明確な対策も残されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:70%"></span></span><span class="stat-value">210</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:30%"></span></span><span class="stat-value">90</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:13%"></span></span><span class="stat-value">40</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:43%"></span></span><span class="stat-value">130</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="Dirt Burrowerの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="dirtburrower-evolution-tab"
+          aria-selected="true" aria-controls="dirtburrower-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="dirtburrower-learnset-tab"
+          aria-selected="false" aria-controls="dirtburrower-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="dirtburrower-evolution-panel" aria-labelledby="dirtburrower-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="dirtburrower-learnset-panel" aria-labelledby="dirtburrower-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Head Bonk</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Throw Sand</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Dig and Hit</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Shake Ground</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Reckless Rush</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Bone Comes Back</span><span class="type-chip type-ground">じめん</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Charged Headbutt</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Small Self-Explosion</span><span class="type-chip type-normal">ノーマル</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     
 
     <article class="monster-card" data-species-id="frozenorb">
-      <img class="monster-art" src="../../images/frozenorb.png" alt="凍り玉" loading="lazy">
-      <h4 class="monster-name">凍り玉</h4>
+      <img class="monster-art" src="../../images/frozenorb.png" alt="Frozen Orb" loading="lazy">
+      <h4 class="monster-name">Frozen Orb</h4>
       <p class="species-id">ID: frozenorb</p>
       <div class="type-chips"><span class="type-chip type-ice">こおり</span></div>
-      <p class="intended-purpose">攻撃的な特殊寄り・汎用型のこおりタイプのレア。ロスターに異なる攻撃の軸を与え、じめんタイプの脅威への回答となる一方、明確な対策も残されている。</p>
+      <p class="intended-purpose">攻撃的な特殊寄り・汎用型のこおりタイプのレア。構成に異なる攻撃の軸を与え、じめんタイプの脅威への回答となる一方、明確な対策も残されている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:63%"></span></span><span class="stat-value">190</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:10%"></span></span><span class="stat-value">30</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:30%"></span></span><span class="stat-value">90</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:50%"></span></span><span class="stat-value">150</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="Frozen Orbの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="frozenorb-evolution-tab"
+          aria-selected="true" aria-controls="frozenorb-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="frozenorb-learnset-tab"
+          aria-selected="false" aria-controls="frozenorb-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="frozenorb-evolution-panel" aria-labelledby="frozenorb-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="frozenorb-learnset-panel" aria-labelledby="frozenorb-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Strong Wind</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">White Haze</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Ice Ray</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Ice Storm</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Freezing Fist</span><span class="type-chip type-ice">こおり</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Huge Hit from the Sky</span><span class="type-chip type-flying">ひこう</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Very Strong Beam</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Reset Everything</span><span class="type-chip type-ice">こおり</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     </div>
@@ -184,13 +365,28 @@
               <h3 class="role-heading role-apex">頂点</h3>
               <div class="card-grid">
     <article class="monster-card" data-species-id="telekineticcoil">
-      <img class="monster-art" src="../../images/telekineticcoil.png" alt="念動コイル" loading="lazy">
-      <h4 class="monster-name">念動コイル</h4>
+      <img class="monster-art" src="../../images/telekineticcoil.png" alt="Telekinetic Coil" loading="lazy">
+      <h4 class="monster-name">Telekinetic Coil</h4>
       <p class="species-id">ID: telekineticcoil</p>
       <div class="type-chips"><span class="type-chip type-psychic">エスパー</span></div>
-      <p class="intended-purpose">伝説級のエスパータイプApex。ロスターで最も価値の高い遭遇・捕獲対象であり、一方的に支配的にならないよう、ゴーストカーブボールによって意図的にカウンターされている。</p>
+      <p class="intended-purpose">伝説級のエスパータイプApex。構成で最も価値の高い遭遇・捕獲対象であり、一方的に支配的にならないよう、ゴーストカーブボールによって意図的にカウンターされている。</p>
       <div class="stat-bars"><div class="stat-row"><span class="stat-label">HP</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:90%"></span></span><span class="stat-value">270</span></div><div class="stat-row"><span class="stat-label">こうげき</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:37%"></span></span><span class="stat-value">110</span></div><div class="stat-row"><span class="stat-label">ぼうぎょ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:15%"></span></span><span class="stat-value">44</span></div><div class="stat-row"><span class="stat-label">とくしゅ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:57%"></span></span><span class="stat-value">170</span></div><div class="stat-row"><span class="stat-label">すばやさ</span><span class="stat-bar-track"><span class="stat-bar-fill" style="width:50%"></span></span><span class="stat-value">150</span></div></div>
-      <p class="evolution-summary evolution-none">進化しない</p>
+      
+    <section class="monster-card-details" aria-label="Telekinetic Coilの詳細">
+      <div class="monster-card-tabs" role="tablist" aria-label="カード詳細">
+        <button class="monster-card-tab" type="button" role="tab" id="telekineticcoil-evolution-tab"
+          aria-selected="true" aria-controls="telekineticcoil-evolution-panel">進化</button>
+        <button class="monster-card-tab" type="button" role="tab" id="telekineticcoil-learnset-tab"
+          aria-selected="false" aria-controls="telekineticcoil-learnset-panel" tabindex="-1">覚える技</button>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="telekineticcoil-evolution-panel" aria-labelledby="telekineticcoil-evolution-tab">
+        <p class="evolution-summary evolution-none">進化しない</p>
+      </div>
+      <div class="monster-card-panel" role="tabpanel" id="telekineticcoil-learnset-panel" aria-labelledby="telekineticcoil-learnset-tab" hidden>
+        <ul class="learnset-list"><li class="learnset-row"><span class="learnset-level">Lv.1</span><span class="learnset-name">Scratch</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.2</span><span class="learnset-name">Head Spin</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.3</span><span class="learnset-name">Strong Mind Power</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.4</span><span class="learnset-name">Charge Wind Cutter</span><span class="type-chip type-normal">ノーマル</span></li><li class="learnset-row"><span class="learnset-level">Lv.5</span><span class="learnset-name">Strange Light Ray</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.7</span><span class="learnset-name">Drain Sleeping Foe</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.9</span><span class="learnset-name">Level-Based Wave</span><span class="type-chip type-psychic">エスパー</span></li><li class="learnset-row"><span class="learnset-level">Lv.10</span><span class="learnset-name">Invisible Wall</span><span class="type-chip type-psychic">エスパー</span></li></ul>
+      </div>
+    </section>
+    
       <p class="encounter-info encounter-none">現在の出現マップには接続されていません</p>
     </article>
     </div>
@@ -199,8 +395,8 @@
     </main>
     
     <footer class="site-footer">
-      <p>エクスポート元コミット: <code>e9e05aa3</code></p>
-      <p>エクスポート日時: <code>2026-08-28T23:11:29Z</code></p>
+      <p>エクスポート元コミット: <code>4e778bf8</code></p>
+      <p>エクスポート日時: <code>2026-08-29T03:37:05Z</code></p>
     </footer>
     
     
