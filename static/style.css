@@ -313,6 +313,15 @@ main {
   font-size: 0.85rem;
 }
 
+.monster-art-link {
+  display: block;
+}
+
+.monster-art-link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 /* Compact lower-card details */
 
 .monster-card-details {
@@ -452,6 +461,106 @@ dl.encounter-info dt {
   font-style: italic;
 }
 
+/* Monster encyclopedia/detail/history (#554) */
+
+.monster-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.monster-index-card,
+.monster-detail-section,
+.monster-context-section,
+.revision-history,
+.monster-detail-hero {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.monster-index-card h2,
+.monster-detail-section h2,
+.monster-context-section h2,
+.revision-history h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.monster-index-card h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.evolution-family,
+.revision-change {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+.monster-detail-hero {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: minmax(12rem, 20rem) minmax(0, 1fr);
+  margin-bottom: 1rem;
+}
+
+.monster-detail-hero .stat-bars {
+  margin-top: 1rem;
+}
+
+.monster-detail-section,
+.monster-context-section,
+.revision-history {
+  margin-top: 1rem;
+}
+
+.monster-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 1rem 0 0;
+}
+
+.monster-attributes div {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.monster-attributes dt { color: var(--color-text-muted); }
+.monster-attributes dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+.learnset-table-wrap { overflow-x: auto; }
+
+.learnset-detail {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  min-width: 35rem;
+  width: 100%;
+}
+
+.learnset-detail th,
+.learnset-detail td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.45rem;
+  text-align: left;
+}
+
+.revision-history ol,
+.monster-context-section ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.current-revision {
+  background: var(--color-bg);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.4rem;
+}
+
 /* Responsive: phone-width layout */
 
 @media (max-width: 30rem) {
@@ -461,6 +570,10 @@ dl.encounter-info dt {
   }
 
   .card-grid, .roster-list {
+    grid-template-columns: 1fr;
+  }
+
+  .monster-index-grid, .monster-detail-hero {
     grid-template-columns: 1fr;
   }
 
