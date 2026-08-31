@@ -223,6 +223,42 @@ main {
   border: 1px dashed var(--color-border);
 }
 
+/* Issue #620: a Draft species with no canonical artwork yet gets a
+   deliberate "?" placeholder, distinct from monster-art-missing above
+   (which means "art exists but this build's images_dir doesn't have the
+   file"), so a viewer never mistakes the two situations. */
+.monster-art-draft-missing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  color: var(--color-status-draft);
+  border: 1px dashed var(--color-status-draft);
+  background: var(--color-bg);
+}
+
+.monster-art-draft-missing-glyph {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.monster-art-draft-missing-label {
+  font-size: 0.75rem;
+}
+
+.draft-caveat {
+  margin: 0.1rem 0 0;
+  color: var(--color-status-draft);
+  font-size: 0.8rem;
+}
+
+.counter-draft-caveat {
+  color: var(--color-status-draft);
+  font-size: 0.85rem;
+}
+
 .monster-name {
   margin: 0.25rem 0 0;
   font-size: 1.05rem;
